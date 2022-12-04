@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper-outer">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="company logo" />
+        </div>
+      </header>
+      <main>
+        <form>
+          <div class="form-container" id="formEl">
+            <section class="calculate">
+              <div class="input-area bill-container">
+                <label for="bill-amt" class="label">Bill</label>
+                <input
+                  type="number"
+                  id="bill-amt"
+                  placeholder="0"
+                  min="1"
+                  maxlength="2"
+                />
+              </div>
+
+              <div class="tip-amt">
+                <h2 class="title">Select Tip %</h2>
+                <div class="tip-options" role="radiogroup">
+                  <div class="radiobtn">
+                    <input type="radio" value="5" name="tip" id="five" />
+                    <label for="five">5%</label>
+                  </div>
+
+                  <div class="radiobtn">
+                    <input type="radio" value="10" name="tip" id="ten" />
+                    <label for="ten">10%</label>
+                  </div>
+
+                  <div class="radiobtn">
+                    <input type="radio" value="15" name="tip" id="fifteen" />
+                    <label for="fifteen">15%</label>
+                  </div>
+
+                  <div class="radiobtn">
+                    <input
+                      type="radio"
+                      value="25"
+                      name="tip"
+                      id="twenty-five"
+                    />
+                    <label for="twenty-five">25%</label>
+                  </div>
+
+                  <div class="radiobtn">
+                    <input type="radio" value="50" name="tip" id="fifty" />
+                    <label for="fifty">50%</label>
+                  </div>
+
+                  <div class="custom-tip" id="customEl">
+                    <input type="radio" value="" name="tip" id="custom-radio" />
+                    <label for="custom-radio" class="visually-hidden"
+                      >Custom Input</label
+                    >
+
+                    <label for="custom-input">
+                      <input
+                        type="number"
+                        id="custom-input"
+                        name="tip-custom"
+                        placeholder="Custom"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-area person-container">
+                <label for="people" class="label">Number of People</label>
+                <input type="number" id="people" placeholder="0" min="1" />
+                <span class="error" id="peopleError">Hello World</span>
+              </div>
+            </section>
+            <section class="result">
+              <div class="amount-result">
+                <div class="title">
+                  Tip Amount <span class="person">/ person</span>
+                </div>
+                <div class="value"><span id="amountEl">$0.00</span></div>
+              </div>
+              <div class="total-result">
+                <div class="title">
+                  Total <span class="person">/ person</span>
+                </div>
+                <div class="value"><span id="totalEl">$0.00</span></div>
+              </div>
+              <button type="reset" class="reset-form" id="resetbtn" disabled>
+                Reset
+              </button>
+            </section>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
